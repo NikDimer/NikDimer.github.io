@@ -67,23 +67,33 @@ function sborka() {
     var mas;
     ch = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20'];
     mas = [];
-    t = getRandomInRange(1, 20);
+    t = getRandomInRange(0, 19);
     mas.push(ch[t]);
-    delete ch[t];
-    t = getRandomInRange(1, 19);
+    ch = obr(ch, t, 20);
+    t = getRandomInRange(0, 18);
     mas.push(ch[t]);
-    delete ch[t];
-    t = getRandomInRange(1, 18);
+    ch = obr(ch, t, 20);
+    t = getRandomInRange(0, 17);
     mas.push(ch[t]);
-    delete ch[t];
-    t = getRandomInRange(1, 17);
+    ch = obr(ch, t, 20);
+    t = getRandomInRange(0, 16);
     mas.push(ch[t]);
-    delete ch[t];
-    t = getRandomInRange(1, 16);
+    ch = obr(ch, t, 20);
+    t = getRandomInRange(0, 15);
     mas.push(ch[t]);
-    delete ch[t];
-    t = getRandomInRange(1, 15);
+    ch = obr(ch, t, 20);
+    t = getRandomInRange(0, 14);
     mas.push(ch[t]);
-    delete ch[t];
+    ch = obr(ch, t, 20);
     return mas;
+}
+
+function obr(ob, n, p) {
+    s = []
+    for (var i = 0; i < p; i++) {
+        if (i != n) {
+            s.push(ob[i]);
+        }
+    }
+    return s;
 }
