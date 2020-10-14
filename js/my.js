@@ -16,6 +16,7 @@ function init() {
     camera.position.x = 0;
 
     scene = new THREE.Scene();
+    scene.renderer.setClearColor(0xffffff, 0);
     var geometry = new THREE.BoxGeometry();
         var textureLoader = new THREE.TextureLoader();
         textureLoader.setPath('textures/' + 'texture' + '/');
@@ -70,8 +71,8 @@ function init() {
         // Create your background scene
         var backgroundScene = new THREE.Scene();
         var backgroundCamera = new THREE.Camera();
-        backgroundScene .add(backgroundCamera );
-        backgroundScene .add(backgroundMesh );
+        backgroundScene.add(backgroundCamera );
+        backgroundScene.add(backgroundMesh );
 
 function animate() {
 
@@ -79,7 +80,7 @@ function animate() {
     controls.update();
     // mesh.rotation.x += 0.01;
     // mesh.rotation.y += 0.02;
-    renderer.render(backgroundScene , backgroundCamera );
+    renderer.render(backgroundScene , backgroundCamera);
     renderer.render(scene, camera);
     
 }
