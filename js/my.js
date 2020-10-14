@@ -10,7 +10,7 @@ function getRandomInRange(min, max) {
 
 function init() {
 
-    camera = new THREE.PerspectiveCamera(70, window.innerWidth / window.innerHeight, 0.01, 1000);
+    camera = new THREE.PerspectiveCamera(35, window.innerWidth / window.innerHeight, 0.01, 1000);
     camera.position.y = 5;
     camera.position.z = 0;
     camera.position.x = 0;
