@@ -16,7 +16,6 @@ function init() {
     camera.position.x = 0;
 
     scene = new THREE.Scene();
-    scene.renderer.setClearColor(0xffffff, 0);
     var geometry = new THREE.BoxGeometry();
         var textureLoader = new THREE.TextureLoader();
         textureLoader.setPath('textures/' + 'texture' + '/');
@@ -46,6 +45,7 @@ function init() {
     renderer = new THREE.WebGLRenderer({ antialias: true });
     renderer.setSize(window.innerWidth / 2, window.innerHeight / 2);
     document.body.appendChild(renderer.domElement);
+    scene.renderer.setClearColor(0xffffff, 0);
 
     controls = new THREE.OrbitControls (camera, renderer.domElement);
     //controls = new THREE.OrbitControls(camera);
