@@ -42,7 +42,7 @@ function init() {
     scene.add( cube );
 
     renderer = new THREE.WebGLRenderer({ antialias: true });
-    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setSize(400, 300);
     document.body.appendChild(renderer.domElement);
 
     controls = new THREE.OrbitControls (camera, renderer.domElement);
