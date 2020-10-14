@@ -54,33 +54,12 @@ function init() {
     //scene.add(controls.getObject());
 }
 
-// Load the background texture
-        var textureLoader = new THREE.TextureLoader();
-        textureLoader.setPath('textures/' + 'texture' + '/');
-        var texture = textureLoader.load('1.jpg');
-        var backgroundMesh = new THREE.Mesh(
-            new THREE.PlaneGeometry(2, 2, 0),
-            new THREE.MeshBasicMaterial({
-                map: texture
-            }));
-        
-        
-        backgroundMesh .material.depthTest = false;
-        backgroundMesh .material.depthWrite = false;
-
-        // Create your background scene
-        var backgroundScene = new THREE.Scene();
-        var backgroundCamera = new THREE.PerspectiveCamera(35, window.innerWidth / window.innerHeight, 0.01, 1000);
-        backgroundScene.add(backgroundCamera );
-        backgroundScene.add(backgroundMesh );
-
 function animate() {
 
     requestAnimationFrame(animate);
     controls.update();
     // mesh.rotation.x += 0.01;
     // mesh.rotation.y += 0.02;
-    renderer.render(backgroundScene , backgroundCamera);
     renderer.render(scene, camera);
     
 }
