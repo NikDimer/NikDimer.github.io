@@ -70,7 +70,7 @@ function init() {
 
         // Create your background scene
         var backgroundScene = new THREE.Scene();
-        var backgroundCamera = new THREE.Camera();
+        var backgroundCamera = new THREE.PerspectiveCamera(35, window.innerWidth / window.innerHeight, 0.01, 1000);
         backgroundScene.add(backgroundCamera );
         backgroundScene.add(backgroundMesh );
 
