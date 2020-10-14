@@ -52,6 +52,23 @@ function init() {
     //scene.add(controls.getObject());
 }
 
+// Load the background texture
+        var texture = THREE.ImageUtils.loadTexture( '1.jpg' );
+        var backgroundMesh = new THREE.Mesh(
+            new THREE.PlaneGeometry(2, 2, 0),
+            new THREE.MeshBasicMaterial({
+                map: texture
+            }));
+
+        backgroundMesh .material.depthTest = false;
+        backgroundMesh .material.depthWrite = false;
+
+        // Create your background scene
+        var backgroundScene = new THREE.Scene();
+        var backgroundCamera = new THREE.Camera();
+        backgroundScene .add(backgroundCamera );
+        backgroundScene .add(backgroundMesh );
+
 function animate() {
 
     requestAnimationFrame(animate);
