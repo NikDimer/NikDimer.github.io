@@ -28,6 +28,7 @@ function init() {
         var textureSide2 = textureLoader.load(sp[3] + '.jpg');
         var textureSide3 = textureLoader.load(sp[4] + '.jpg');
         var textureSide4 = textureLoader.load(sp[5] + '.jpg');
+        
         var material = [
             new THREE.MeshBasicMaterial({ map: textureSide1 }),
             new THREE.MeshBasicMaterial({ map: textureSide2 }),
@@ -53,13 +54,16 @@ function init() {
 }
 
 // Load the background texture
+        var textureLoader = new THREE.TextureLoader();
+        textureLoader.setPath('textures/' + 'texture' + '/');
         var texture = textureLoader.load('1.jpg');
         var backgroundMesh = new THREE.Mesh(
             new THREE.PlaneGeometry(2, 2, 0),
             new THREE.MeshBasicMaterial({
                 map: texture
             }));
-
+        
+        
         backgroundMesh .material.depthTest = false;
         backgroundMesh .material.depthWrite = false;
 
