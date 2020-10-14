@@ -53,7 +53,7 @@ function init() {
 }
 
 // Load the background texture
-        var texture = THREE.ImageUtils.loadTexture( '1.jpg' );
+        var texture = textureLoader.load('1.jpg');
         var backgroundMesh = new THREE.Mesh(
             new THREE.PlaneGeometry(2, 2, 0),
             new THREE.MeshBasicMaterial({
