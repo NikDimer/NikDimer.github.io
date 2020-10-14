@@ -69,21 +69,21 @@ function sborka() {
     mas = [];
     t = getRandomInRange(1, 20);
     mas.push(ch[t]);
-    delete mas[t];
+    delete ch[t];
     t = getRandomInRange(1, 19);
     mas.push(ch[t]);
-    delete mas[t];
+    delete ch[t];
     t = getRandomInRange(1, 18);
     mas.push(ch[t]);
-    delete mas[t];
+    delete ch[t];
     t = getRandomInRange(1, 17);
     mas.push(ch[t]);
-    delete mas[t];
+    delete ch[t];
     t = getRandomInRange(1, 16);
     mas.push(ch[t]);
-    delete mas[t];
+    delete ch[t];
     t = getRandomInRange(1, 15);
     mas.push(ch[t]);
-    delete mas[t];
+    delete ch[t];
     return mas;
 }
