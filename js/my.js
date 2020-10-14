@@ -81,7 +81,7 @@ function animate() {
     // mesh.rotation.y += 0.02;
 
     renderer.render(scene, camera);
-
+    renderer.render(backgroundScene , backgroundCamera );
 }
 
 function sborka() {
