@@ -16,7 +16,7 @@ function init() {
     camera.position.x = 0;
 
     scene = new THREE.Scene();
-    scene.background = new THREE.Color( 0x1e90ff );
+    scene.background = new THREE.Color( 0x18b3ff );
     var geometry = new THREE.BoxGeometry();
         var textureLoader = new THREE.TextureLoader();
         textureLoader.setPath('textures/' + 'texture' + '/');
