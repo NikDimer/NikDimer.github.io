@@ -2,7 +2,7 @@ var camera, scene, renderer, controls;
 var geometry, material;
 
 init();
-var geometry = new THREE.BoxGeometry( 80, 80, 1);
+var geometry = new THREE.BoxGeometry( 80, 60, 1);
 
 var textureLoader = new THREE.TextureLoader();
 textureLoader.setPath('textures/' + 'vrata' + '/');
