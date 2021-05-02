@@ -23,7 +23,6 @@ var material = [
 var cube1 = new THREE.Mesh( geometry, material );
 scene.add( cube1 );
 cube1.position.x -= 40;
-cube1.position.y += 5;
 
 var textureTop = textureLoader.load('vrata1.jpg');
 var textureSide = textureLoader.load('vrata1.jpg');
@@ -41,7 +40,6 @@ var material = [
 var cube2 = new THREE.Mesh( geometry, material );
 scene.add( cube2 );
 cube2.position.x += 40;
-cube2.position.y += 5;
 k = -500
 animate();
 
