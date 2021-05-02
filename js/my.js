@@ -62,7 +62,7 @@ function init() {
 
     
 
-    camera.position.z = 25;
+    camera.position.z = 40;
 }
 
 function animate() {
