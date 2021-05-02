@@ -40,7 +40,7 @@ var material = [
 var cube2 = new THREE.Mesh( geometry, material );
 scene.add( cube2 );
 cube2.position.x += 40;
-k = 0
+k = -500
 animate();
 
 function init() {
@@ -70,7 +70,7 @@ function animate() {
     requestAnimationFrame(animate);
 
     playerControls();
-    if (k < 250) {
+    if (k < 240 & k > 0) {
         cube1.rotation.y += 0.01;
         cube1.position.z -= 0.044;
         cube1.position.x -= 0.044;
@@ -81,6 +81,11 @@ function animate() {
 
         k += 1;
     }
+
+    if (k < 1) {
+        k += 1;
+    }
+
     renderer.render(scene, camera);
 
 }
