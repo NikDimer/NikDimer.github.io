@@ -284,6 +284,15 @@ function animate() {
         }
     }
     
+    if (k1 > 1630) {
+        scene.background = new THREE.Color( 0xffffff );
+        var geometry = new THREE.SphereGeometry(6, 32, 32);
+        var material = new THREE.MeshLambertMaterial({color: 0x000000});
+        var sphere2 = new THREE.Mesh( geometry, material );
+        sphere2.position.z -= 30;
+        scene.add( sphere2 );
+    }
+    
     renderer.render(scene, camera);
 
 }
