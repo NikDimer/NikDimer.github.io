@@ -236,8 +236,14 @@ function animate() {
     if (k1 > 1000) {
         line.visible = false;
         line1.visible = false;
+        
+        if (k1 < 1500) {
+            plane.position.y -= 1;
+            plane1.position.y -= 1;
+            plane2.position.y -= 1;
+        }
     }
-
+    
     renderer.render(scene, camera);
 
 }
