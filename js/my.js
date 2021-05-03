@@ -109,9 +109,9 @@ var material = [
     new THREE.MeshBasicMaterial({ map: texture })
 ];
 var plane1 = new THREE.Mesh( geometry, material );
-plane.position.z -= 50;
-plane.position.x += 20;
-plane.position.y += 150;
+plane1.position.z -= 50;
+plane1.position.x += 20;
+plane1.position.y += 150;
 console.log(plane1)
 scene.add( plane1 );
 
@@ -128,9 +128,9 @@ var material = [
     new THREE.MeshBasicMaterial({ map: texture })
 ];
 var plane2 = new THREE.Mesh( geometry, material );
-plane.position.z -= 50;
-plane.position.x -= 40;
-plane.position.y += 200;
+plane2.position.z -= 50;
+plane2.position.x -= 40;
+plane2.position.y += 200;
 console.log(plane2)
 scene.add( plane2 );
 
