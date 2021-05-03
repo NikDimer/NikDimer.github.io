@@ -158,7 +158,7 @@ scene.add( plane7 );
 var plane8 = new THREE.Mesh( geometry, material );
 plane8.position.z -= 50;
 plane8.position.x -= getRandom(-40, 40);
-plane8.position.y += ;
+plane8.position.y += 440;
 scene.add( plane8 );
 var plane9 = new THREE.Mesh( geometry, material );
 plane9.position.z -= 50;
