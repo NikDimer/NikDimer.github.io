@@ -77,7 +77,7 @@ var line1 = new THREE.LineSegments( edges, new THREE.LineBasicMaterial( { color:
 line1.position.z -= 30;
 scene.add( line1 );
 
-var geometry = new THREE.BoxGeometry(10, 10, 0.5);
+var geometry = new THREE.BoxGeometry(20, 20, 0.5);
 var textureLoader = new THREE.TextureLoader();
 textureLoader.setPath('textures/' + 'magic' + '/');
 var texture = textureLoader.load('1.jpg');
