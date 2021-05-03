@@ -92,7 +92,7 @@ var material = [
 var plane = new THREE.Mesh( geometry, material );
 plane.position.z -= 50;
 plane.position.x += getRandom(-20, 20);
-plane.rotation.y += 0.5;
+plane.rotation.y += Math.PI / 2;
 
 scene.add( plane );
 
