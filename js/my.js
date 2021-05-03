@@ -73,7 +73,8 @@ var line1 = new THREE.LineSegments( edges, new THREE.LineBasicMaterial( { color:
 line1.position.z -= 30;
 scene.add( line1 );
 
-k = -500
+k = -500;
+k1 = 0;
 animate();
 
 function init() {
