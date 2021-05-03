@@ -1,6 +1,10 @@
 var camera, scene, renderer, controls;
 var geometry, material;
 
+function getRandom(min, max){
+    return (Math.floor(Math.random() * (max - min + 1)) + min).toFixed();
+}
+
 init();
 var geometry = new THREE.BoxGeometry( 80, 80, 1);
 
@@ -72,6 +76,16 @@ var edges = new THREE.EdgesGeometry( geometry );
 var line1 = new THREE.LineSegments( edges, new THREE.LineBasicMaterial( { color: 0xffffff } ) );
 line1.position.z -= 30;
 scene.add( line1 );
+
+var geometry = new THREE.PlaneGeometry( 20, 20, 32 );
+var textureLoader = new THREE.TextureLoader();
+textureLoader.setPath('textures/' + 'magic' + '/');
+var texture = textureLoader.load('1.jpg');
+var material = new THREE.MeshBasicMaterial( {texture} );
+var plane = new THREE.Mesh( geometry, material );
+plane.position.z -= 50;
+plane.position.x += getRandom(-20, 20);
+scene.add( plane );
 
 k = -500;
 k1 = 0;
