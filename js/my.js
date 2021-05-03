@@ -91,10 +91,19 @@ var material = [
 ];
 var plane = new THREE.Mesh( geometry, material );
 plane.position.z -= 50;
-plane.position.x += 30;
+plane.position.x += getRandom(-40, 40);
 plane.position.y += 90;
-console.log(plane)
 scene.add( plane );
+var plane1 = new THREE.Mesh( geometry, material );
+plane1.position.z -= 50;
+plane1.position.x += getRandom(-40, 40);
+plane1.position.y += 250;
+scene.add( plane1 );
+var plane2 = new THREE.Mesh( geometry, material );
+plane2.position.z -= 50;
+plane2.position.x += getRandom(-40, 40);
+plane2.position.y += 370;
+scene.add( plane2 );
 
 var geometry = new THREE.BoxGeometry(30, 30, 0.01);
 var textureLoader = new THREE.TextureLoader();
@@ -108,12 +117,26 @@ var material = [
     new THREE.MeshBasicMaterial({ map: texture }),
     new THREE.MeshBasicMaterial({ map: texture })
 ];
-var plane1 = new THREE.Mesh( geometry, material );
-plane1.position.z -= 50;
-plane1.position.x += 20;
-plane1.position.y += 150;
-console.log(plane1)
-scene.add( plane1 );
+var plane3 = new THREE.Mesh( geometry, material );
+plane3.position.z -= 50;
+plane3.position.x += getRandom(-40, 40);
+plane3.position.y += 130;
+scene.add( plane3 );
+var plane4 = new THREE.Mesh( geometry, material );
+plane4.position.z -= 50;
+plane4.position.x += getRandom(-40, 40);
+plane4.position.y += 170;
+scene.add( plane4 );
+var plane5 = new THREE.Mesh( geometry, material );
+plane5.position.z -= 50;
+plane5.position.x += getRandom(-40, 40);
+plane5.position.y += 290;
+scene.add( plane5 );
+var plane6 = new THREE.Mesh( geometry, material );
+plane6.position.z -= 50;
+plane6.position.x += getRandom(-40, 40);
+plane6.position.y += 410;
+scene.add( plane6 );
 
 var geometry = new THREE.BoxGeometry(30, 30, 0.01);
 var textureLoader = new THREE.TextureLoader();
@@ -127,12 +150,21 @@ var material = [
     new THREE.MeshBasicMaterial({ map: texture }),
     new THREE.MeshBasicMaterial({ map: texture })
 ];
-var plane2 = new THREE.Mesh( geometry, material );
-plane2.position.z -= 50;
-plane2.position.x -= 40;
-plane2.position.y += 200;
-console.log(plane2)
-scene.add( plane2 );
+var plane7 = new THREE.Mesh( geometry, material );
+plane7.position.z -= 50;
+plane7.position.x -= getRandom(-40, 40);
+plane7.position.y += 210;
+scene.add( plane7 );
+var plane8 = new THREE.Mesh( geometry, material );
+plane8.position.z -= 50;
+plane8.position.x -= getRandom(-40, 40);
+plane8.position.y += ;
+scene.add( plane8 );
+var plane9 = new THREE.Mesh( geometry, material );
+plane9.position.z -= 50;
+plane9.position.x -= getRandom(-40, 40);
+plane9.position.y += 330;
+scene.add( plane9 );
 
 k = -500;
 k1 = 0;
@@ -237,10 +269,17 @@ function animate() {
         line.visible = false;
         line1.visible = false;
         
-        if (k1 < 1500) {
+        if (k1 < 1700) {
             plane.position.y -= 1;
             plane1.position.y -= 1;
             plane2.position.y -= 1;
+            plane3.position.y -= 1;
+            plane4.position.y -= 1;
+            plane5.position.y -= 1;
+            plane6.position.y -= 1;
+            plane7.position.y -= 1;
+            plane8.position.y -= 1;
+            plane9.position.y -= 1;
         }
     }
     
