@@ -269,7 +269,7 @@ function animate() {
         line.visible = false;
         line1.visible = false;
         
-        if (k1 < 1700) {
+        if (k1 < 1630) {
             plane.position.y -= 1;
             plane1.position.y -= 1;
             plane2.position.y -= 1;
