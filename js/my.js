@@ -127,12 +127,12 @@ var material = [
     new THREE.MeshBasicMaterial({ map: texture }),
     new THREE.MeshBasicMaterial({ map: texture })
 ];
-var plane = new THREE.Mesh( geometry, material );
+var plane2 = new THREE.Mesh( geometry, material );
 plane.position.z -= 50;
 plane.position.x -= 40;
 plane.position.y += 200;
-console.log(plane)
-scene.add( plane );
+console.log(plane2)
+scene.add( plane2 );
 
 k = -500;
 k1 = 0;
