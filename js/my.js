@@ -92,6 +92,8 @@ var material = [
 var plane = new THREE.Mesh( geometry, material );
 plane.position.z -= 50;
 plane.position.x += getRandom(-20, 20);
+plane.rotation.y += 0.5;
+
 scene.add( plane );
 
 k = -500;
@@ -197,9 +199,6 @@ function animate() {
         line.visible = false;
         line1.visible = false;
     }
-
-    plane.rotation.y += 0.03;
-    plane.rotation.z += 0.03;
 
     renderer.render(scene, camera);
 
