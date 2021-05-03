@@ -178,7 +178,6 @@ function init() {
     camera.position.x = 0;
 
     scene = new THREE.Scene();
-    scene.background = new THREE.Color( 0xff0000 );
     renderer = new THREE.WebGLRenderer();
     renderer.setSize(window.innerWidth, window.innerHeight);
     document.body.appendChild(renderer.domElement);
