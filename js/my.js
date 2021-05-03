@@ -198,7 +198,8 @@ function animate() {
         line1.visible = false;
     }
 
-    renderer.render(scene, camera);
+    plane.rotation.y += 0.03;
+    plane.rotation.z += 0.03;
 
     renderer.render(scene, camera);
 
