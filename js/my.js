@@ -92,6 +92,7 @@ var material = [
 var plane = new THREE.Mesh( geometry, material );
 plane.position.z -= 50;
 plane.position.x += 10;
+plane.position.y += 20;
 console.log(plane)
 scene.add( plane );
 
