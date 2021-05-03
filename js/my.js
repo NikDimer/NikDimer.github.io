@@ -91,8 +91,46 @@ var material = [
 ];
 var plane = new THREE.Mesh( geometry, material );
 plane.position.z -= 50;
-plane.position.x += 10;
-plane.position.y += 60;
+plane.position.x += 30;
+plane.position.y += 90;
+console.log(plane)
+scene.add( plane );
+
+var geometry = new THREE.BoxGeometry(30, 30, 0.01);
+var textureLoader = new THREE.TextureLoader();
+textureLoader.setPath('textures/' + 'magic' + '/');
+var texture = textureLoader.load('2.jpg');
+var material = [
+    new THREE.MeshBasicMaterial({ map: texture }),
+    new THREE.MeshBasicMaterial({ map: texture }),
+    new THREE.MeshBasicMaterial({ map: texture }),
+    new THREE.MeshBasicMaterial({ map: texture }),
+    new THREE.MeshBasicMaterial({ map: texture }),
+    new THREE.MeshBasicMaterial({ map: texture })
+];
+var plane1 = new THREE.Mesh( geometry, material );
+plane.position.z -= 50;
+plane.position.x += 20;
+plane.position.y += 150;
+console.log(plane1)
+scene.add( plane1 );
+
+var geometry = new THREE.BoxGeometry(30, 30, 0.01);
+var textureLoader = new THREE.TextureLoader();
+textureLoader.setPath('textures/' + 'magic' + '/');
+var texture = textureLoader.load('3.jpg');
+var material = [
+    new THREE.MeshBasicMaterial({ map: texture }),
+    new THREE.MeshBasicMaterial({ map: texture }),
+    new THREE.MeshBasicMaterial({ map: texture }),
+    new THREE.MeshBasicMaterial({ map: texture }),
+    new THREE.MeshBasicMaterial({ map: texture }),
+    new THREE.MeshBasicMaterial({ map: texture })
+];
+var plane = new THREE.Mesh( geometry, material );
+plane.position.z -= 50;
+plane.position.x -= 40;
+plane.position.y += 200;
 console.log(plane)
 scene.add( plane );
 
