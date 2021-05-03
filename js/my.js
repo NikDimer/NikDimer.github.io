@@ -280,10 +280,11 @@ function animate() {
             plane7.position.y -= 1;
             plane8.position.y -= 1;
             plane9.position.y -= 1;
+            k1 += 1;
         }
     }
     
-    if (k1 > 1630) {
+    if (k1 == 1630) {
         scene.background = new THREE.Color( 0xffffff );
         var geometry = new THREE.SphereGeometry(6, 32, 32);
         var material = new THREE.MeshLambertMaterial({color: 0x000000});
