@@ -81,7 +81,14 @@ var geometry = new THREE.BoxGeometry(10, 10, 0.5);
 var textureLoader = new THREE.TextureLoader();
 textureLoader.setPath('textures/' + 'magic' + '/');
 var texture = textureLoader.load('1.jpg');
-var material = new THREE.MeshBasicMaterial( {texture} );
+var material = [
+    new THREE.MeshBasicMaterial({ map: texture }),
+    new THREE.MeshBasicMaterial({ map: texture }),
+    new THREE.MeshBasicMaterial({ map: texture }),
+    new THREE.MeshBasicMaterial({ map: texture }),
+    new THREE.MeshBasicMaterial({ map: texture }),
+    new THREE.MeshBasicMaterial({ map: texture })
+];
 var plane = new THREE.Mesh( geometry, material );
 plane.position.z -= 50;
 plane.position.x += getRandom(-20, 20);
