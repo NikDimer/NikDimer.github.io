@@ -1,0 +1,109 @@
+.is_user { background-color: grey; }
+
+body {
+    margin:0;
+    padding: 0;
+}
+
+table, tr, td, th {
+    border: 1px solid black;
+    border-collapse: collapse;
+    z-index: 2;
+}
+
+tr {
+    background-color: white;
+}
+
+#hren-ne-nujniy {
+    display: none;
+}
+
+.glav {
+    position: absolute;
+    top: 0px;
+    right: 20px;
+    font-size: 24px;
+    text-transform: uppercase;
+    border: 2px solid blue;
+    padding: 5px 10px;
+    background-color: white;
+}
+
+table {
+    margin: 0;
+}
+
+tr, td, th {
+    padding: 5px;
+}
+
+.bk {
+    width: 700px;
+    height: 100%;
+    left: 320px;
+    position: absolute;
+    top: 0;
+    background-color: white;
+    z-index: 1;
+    display: none;
+}
+
+.polza1 {
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    top: 10px;
+    left: 10px;
+    background-color: white;
+}
+
+.polza1-text {
+    text-align: center;
+    position: relative;
+    top: 5px;
+    font-size: 20px;
+}
+
+.polza2 {
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    top: 10px;
+    left: 10px;
+    border-radius: 50%;
+    background-image: url('img/extr.jpg');
+}
+
+.polza2-text {
+    text-align: center;
+    position: relative;
+    top: 5px;
+    font-size: 20px;
+}
+
+.b1 {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.b2 {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.osn {
+    position: absolute;
+    left: 300px;
+    background-color: white;
+    padding: 0 100px;
+    height: 100%;
+}
+
+#c {
+    z-index: -3;
+    position: fixed;
+}

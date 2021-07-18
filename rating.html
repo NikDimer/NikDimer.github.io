@@ -1,0 +1,226 @@
+<html>
+    <head>
+        
+<title>Рейтинг участников</title>
+<link rel="stylesheet" type="text/css" href="css/rating.css"/>
+
+        <style>
+            body{
+                font-family: sans-serif;
+            }
+            
+            .form-message li{
+                position: absolute;
+                right: 20px;
+                top: 20px;
+                padding: 10px 15px;
+                list-style: none;
+                border: 2px solid rgb(190, 30, 30);
+                background-color: rgba(190, 30, 30, 0.678);
+                color: white;
+                border-radius: 5px;
+            }
+        </style>
+        <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <canvas id='c' style='display: none;'></canvas>
+        <button id='b2' class='b2'><div class='polza2'><p class='polza2-text'>Экстрим тема</p></div></button>
+        <button id='b1' class='b1' style='display:none;'><div class='polza1'><p class='polza1-text'>Простая тема</p></div></button>
+        <a id='hren-ne-nujniy' href="/index">На главную</a>
+        <a href="/index"><p class='glav'>На главную</p></a>
+        
+        
+        
+    <div class='osn'>
+        <h1 style='text-align: center;' id='gl'> Рейтинг пользователей </h1>
+        <div class='bk'></div>
+        <table style='text-align: center;'>
+            <tr>
+                <th>Место в рейтинге</th>
+                <th>Логин</th>
+                <th>Социальный рейтинг</th>
+            </tr>
+            
+            
+            <tr>
+                <td>1</td>
+                <td>admin</td>
+                <td>0</td>
+            </tr>
+            
+            
+            
+            <tr class="is_user">
+                <td>2</td>
+                <td>NikDimer</td>
+                <td>0</td>
+            </tr>
+            
+            
+            
+            <tr>
+                <td>3</td>
+                <td>Enot2007</td>
+                <td>0</td>
+            </tr>
+            
+            
+            
+            <tr>
+                <td>4</td>
+                <td>Vrzhesch</td>
+                <td>0</td>
+            </tr>
+            
+            
+            
+            <tr>
+                <td>5</td>
+                <td>t-ravnushkin</td>
+                <td>0</td>
+            </tr>
+            
+            
+            
+            <tr>
+                <td>6</td>
+                <td>razxrbladead</td>
+                <td>0</td>
+            </tr>
+            
+            
+            
+            <tr>
+                <td>7</td>
+                <td>Главный хейтер</td>
+                <td>0</td>
+            </tr>
+            
+            
+            
+            <tr>
+                <td>8</td>
+                <td>purple_pumpkin</td>
+                <td>0</td>
+            </tr>
+            
+            
+            
+            <tr>
+                <td>9</td>
+                <td>Alexandr</td>
+                <td>0</td>
+            </tr>
+            
+            
+            
+            <tr>
+                <td>10</td>
+                <td>dsd</td>
+                <td>0</td>
+            </tr>
+            
+            
+            
+            <tr>
+                <td>11</td>
+                <td>тамука</td>
+                <td>0</td>
+            </tr>
+            
+            
+            
+            <tr>
+                <td>12</td>
+                <td>Tralka22</td>
+                <td>0</td>
+            </tr>
+            
+            
+        </table>
+    </div>
+
+    <div class='extrim' id=''>
+            
+        <script src="js/three.js"></script>
+		<script src="js/three.module.js"></script>
+		<script>
+            function getRandomInt(min, max) {
+                min = Math.ceil(min);
+                max = Math.floor(max);
+                return Math.floor(Math.random() * (max - min)) + min; //Максимум не включается, минимум включается
+            }
+
+
+			var scene = new THREE.Scene();
+			var camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+
+            const canvas = document.querySelector('#c');
+            const renderer = new THREE.WebGLRenderer({canvas});
+			renderer.setSize( window.innerWidth, window.innerHeight );
+			document.body.appendChild( renderer.domElement );
+
+            parent = new THREE.Object3D();
+            scene.add(parent);
+
+            //var geometry = new THREE.SphereGeometry(0.3, 16, 16, 0, Math.PI * 2, 0, Math.PI * 2)
+            // material
+
+            let loader = new THREE.FontLoader();
+
+            loader.load( 'fonts/helvetiker_regular.typeface.json', function ( font ) {
+
+	        let geometry = new THREE.TextGeometry( 'Hello three.js!', {
+                    font: font,
+                    size: 80,
+                    height: 5,
+                    curveSegments: 12,
+                    bevelEnabled: true,
+                    bevelThickness: 10,
+                    bevelSize: 8,
+                    bevelOffset: 0,
+                    bevelSegments: 5
+	            } );
+            } );
+
+            var material = new THREE.MeshBasicMaterial({
+                color: 0xffffff,
+                wireframe: true
+            });
+
+            let sps = [];
+			for (let i = 0; i < 400; i++) {
+                var sphere = new THREE.Object3D();
+                sphere.position.set(getRandomInt(-100, 100), getRandomInt(-100, 100), getRandomInt(-100, 100));
+                sps.push(sphere);
+                parent.add(sphere);
+            }
+
+            var meshes = sps.map((sphere) => {
+                var mesh = new THREE.Mesh(geometry, material);
+                sphere.add(mesh)
+                return mesh;
+            });
+
+			camera.position.z = -5;
+
+			var animate = function () {
+				requestAnimationFrame( animate );
+                parent.rotation.x += 0.001;
+				renderer.render( scene, camera );
+			};
+
+			animate();
+		</script>
+        </div>
+
+
+
+    <script src='js/rating-theme-controller.js'></script>
+        
+    </body>
+</html>
